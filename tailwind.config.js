@@ -1,12 +1,6 @@
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-	content: [
-		"./src/**/*.{js,jsx,ts,tsx}",
-		"./node_modules/react-tailwindcss-select/dist/index.esm.js",
-	],
-
-	// enable dark mode via class strategy
-	darkMode: "class",
-
+	content: ["./src/**/*.{js,jsx,ts,tsx}"],
 	theme: {
 		extend: {
 			colors: {
@@ -18,7 +12,14 @@ module.exports = {
 				"secondary-gray": "#F5F5F5",
 				"primary-white": "#FFFFFF",
 			},
+			backgroundImage: {
+				"hero-pattern": "url('../src/assets/images/bg.jpg')",
+				"register-cover": "url('../src/assets/images/register.svg')",
+			},
+			fontFamily: {
+				roboto: ["Roboto", "sans-serif"],
+			},
 		},
 	},
-	plugins: [require("daisyui")],
+	plugins: [],
 };
